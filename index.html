@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão - Geometria Analítica</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📐 Geometria Analítica</h1>
+        <p>Revisão rápida de Matemática</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#assuntos">Assuntos</a>
+        <a href="#formulas">Fórmulas</a>
+        <a href="#calculadora">Calculadora</a>
+    </nav>
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <h2>Revisão de Geometria Analítica</h2>
+
+            <p>
+                A Geometria Analítica utiliza conceitos da álgebra
+                para estudar pontos, retas, distâncias e figuras
+                geométricas através do plano cartesiano.
+            </p>
+
+            <button onclick="mostrarMensagem()">
+                Começar revisão
+            </button>
+
+            <p id="mensagem"></p>
+        </section>
+
+
+        <section id="assuntos">
+
+            <h2>📚 Principais assuntos</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>📍 Plano Cartesiano</h3>
+
+                    <p>
+                        É formado pelos eixos X e Y. Eles dividem o
+                        plano em quatro quadrantes.
+                    </p>
+
+                    <p>
+                        Um ponto é representado por:
+                        <strong>(x, y)</strong>
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>📏 Distância entre pontos</h3>
+
+                    <p>
+                        Permite calcular a distância entre dois
+                        pontos do plano cartesiano.
+                    </p>
+
+                    <div class="formula">
+                        d = √[(x₂ - x₁)² + (y₂ - y₁)²]
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <h3>🎯 Ponto médio</h3>
+
+                    <p>
+                        O ponto médio é o ponto localizado exatamente
+                        no meio de um segmento.
+                    </p>
+
+                    <div class="formula">
+                        M = ((x₁+x₂)/2, (y₁+y₂)/2)
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <h3>📈 Equação da reta</h3>
+
+                    <p>
+                        A reta pode ser representada através da
+                        equação reduzida:
+                    </p>
+
+                    <div class="formula">
+                        y = ax + b
+                    </div>
+
+                    <p>
+                        Onde <strong>a</strong> representa o coeficiente
+                        angular e <strong>b</strong> o coeficiente linear.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>⭕ Circunferência</h3>
+
+                    <p>
+                        A equação reduzida de uma circunferência é:
+                    </p>
+
+                    <div class="formula">
+                        (x-a)² + (y-b)² = r²
+                    </div>
+
+                    <p>
+                        O ponto (a,b) representa o centro e
+                        <strong>r</strong> representa o raio.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>📐 Coeficiente angular</h3>
+
+                    <p>
+                        O coeficiente angular indica a inclinação
+                        de uma reta.
+                    </p>
+
+                    <div class="formula">
+                        a = (y₂-y₁)/(x₂-x₁)
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="formulas">
+
+            <h2>🧠 Fórmulas importantes</h2>
+
+            <div class="formula-box">
+
+                <h3>Distância entre dois pontos</h3>
+
+                <p>
+                    d = √[(x₂ - x₁)² + (y₂ - y₁)²]
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <h3>Ponto médio</h3>
+
+                <p>
+                    M = ((x₁+x₂)/2, (y₁+y₂)/2)
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <h3>Coeficiente angular</h3>
+
+                <p>
+                    a = (y₂-y₁)/(x₂-x₁)
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <h3>Equação da reta</h3>
+
+                <p>
+                    y = ax + b
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <h3>Circunferência</h3>
+
+                <p>
+                    (x-a)² + (y-b)² = r²
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="calculadora">
+
+            <h2>🧮 Calculadora de distância</h2>
+
+            <p>
+                Digite as coordenadas de dois pontos:
+            </p>
+
+            <div class="inputs">
+
+                <div>
+                    <label>Ponto A - X</label>
+                    <input type="number" id="x1">
+                </div>
+
+                <div>
+                    <label>Ponto A - Y</label>
+                    <input type="number" id="y1">
+                </div>
+
+                <div>
+                    <label>Ponto B - X</label>
+                    <input type="number" id="x2">
+                </div>
+
+                <div>
+                    <label>Ponto B - Y</label>
+                    <input type="number" id="y2">
+                </div>
+
+            </div>
+
+            <button onclick="calcularDistancia()">
+                Calcular distância
+            </button>
+
+            <div id="resultado"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            📚 Site de revisão de Matemática
+        </p>
+
+        <p>
+            Geometria Analítica
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
